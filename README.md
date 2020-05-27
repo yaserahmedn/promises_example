@@ -7,6 +7,9 @@ Game is clicking the button (That's not even a game, HAHAHAHAHA).
 If button is clicked more than 5 times within 2 seconds since page load, you win.
 Else you loose.
 
+To make the game work asynchronously, we use Promises. 
+The game is modified in game_with_promises.html file as, on click of 'Start Game' button, the game starts, instead of on loading the entire page.
+
 How promises work?
 
 Promise has 3 states:
