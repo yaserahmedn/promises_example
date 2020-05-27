@@ -2,17 +2,18 @@
 	
 </head>
 <body>
-	<button>Click</button>
+	<button id='start'>Start Game</button>
+	<button id='gameButton'>Click</button>
 	<script type="text/javascript">
 		//Promise is a tool for managing asynchronous codeflow through out our application. 
 		//In other words, code that will be executed at some point in future.
-		//Here, after 2 secs we get alert
+		//Here, after 2 secs we get alert 
 
 
 		function startGame(){
 			let counter=0;
 
-			document.querySelector('button').addEventListener('click', () => {
+			document.getElementById('gameButton').addEventListener('click', () => {
 				++counter;
 			});
 
@@ -30,9 +31,16 @@
 		}
 
 
+		function callGame(){
+			startGame()
+			.then(() => alert('You win!!'))
+			.catch(() => alert('You lost!!'));
+		}
 
-		startGame()
-		.then(() => alert('You win!!'))
-		.catch(() => alert('You lost!!'));
+		document.getElementById('start').addEventListener('click', () => {
+				callGame()
+			});
+
+		
 	</script>
 </body>
